@@ -11,4 +11,17 @@
 	}
 	add_action('init', 'register_my_menus');
 
+	if (function_exists('register_sidebar')) {}
+		register_sidebar(
+			array(
+				'name' => __('Main Sidebar', 'mike-framework'),
+				'id' => 'main-sidebar',
+				'description' => __('The main sidebar area', 'mike-framework'),
+				'before_widget' => '<div class="sidebar-widget">',
+				'after_widget' => '</div> <!-- end sidebar-widget -->',
+				'before_title' => '<h4>',
+				'after_title' => '</h4>'
+		));
+	}
+
 ?>
