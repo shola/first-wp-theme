@@ -1,5 +1,11 @@
-<!-- if dynamic_sidebar doesn't exist, or you cannot display the main side bar -->
+<!-- if dynamic_sidebar doesn't exist, or you cannot DISPLAY the main side bar, then output a default widget -->
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('main-sidebar')) : ?>
-		no widgets here
+	
+
+	<div class="sidebar-widget">
+		<h4><?php _e('Search', 'mike-framework'); ?></h4>
+		<?php get_search_form(); ?>
+	</div>
+
 <?php endif; ?>
