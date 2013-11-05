@@ -28,7 +28,18 @@
 				'name' => __('Left Footer', 'mike-framework'),
 				'id' => 'left-footer',
 				'description' => __('The left footer area', 'mike-framework'),
-				'before_widget' => '<div class="sidebar-widget">',
+				'before_widget' => '<div class="footer-sidebar-widget col-sm-3 col-md 3">',
+				'after_widget' => '</div> <!-- end sidebar-widget -->',
+				'before_title' => '<h4>',
+				'after_title' => '</h4>'
+		));
+
+		register_sidebar(
+			array(
+				'name' => __('Right Footer', 'mike-framework'),
+				'id' => 'right-footer',
+				'description' => __('right footer area', 'mike-framework'),
+				'before_widget' => '<div class="footer-sidebar-widget col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6">',
 				'after_widget' => '</div> <!-- end sidebar-widget -->',
 				'before_title' => '<h4>',
 				'after_title' => '</h4>'
