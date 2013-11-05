@@ -35,7 +35,9 @@
 			<a href="<?php the_permalink(); ?>"><?php echo $display_first_image; ?></a>
 		</figure>
 
-		<php}
+		<p><strong><?php printf(_n('This gallery contains %s photo.', 'This gallery contains %s photos.', $gallery_count, 'mike-framework'), $gallery_count); ?></strong></p>
+
+		<?php }
 
 
 

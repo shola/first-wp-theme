@@ -14,8 +14,8 @@
 
 	<div class="url-container">
 		
-		<p>This will be the link description!</p>
-		<span><a href="http://webdesign.tutsplus.com">http://webdesign.tutsplus.com</a></span>
+		<p><?php the_title(); ?></p>
+		<span><?php the_content(); ?></span>
 		
 	</div> <!-- end quote-container -->
 
