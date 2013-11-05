@@ -10,7 +10,7 @@
 				<div class="articles">
 
 					<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-						<article class="clearfix">
+						<article class="clearfix" id="post-<?php the_ID(); ?>">
 
 							<header>
 								
