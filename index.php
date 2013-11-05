@@ -11,7 +11,7 @@
 
 					<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-						<?php get_template_part('content', get_post_form()); ?>
+						<?php get_template_part('content', get_post_format()); ?>
 
 						<article <?php post_class('clearfix'); ?> id="post-<?php the_ID(); ?>">
 
@@ -40,7 +40,7 @@
 						</article>
 						
 						<hr class="fancy-hr" />
-						
+
 					<?php endwhile; else : ?>
 						<h1><?php _e('No posts were found', 'mike-framework') ?></h1>
 					<?php endif; ?>
