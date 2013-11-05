@@ -8,10 +8,6 @@
 				<div class="row">
 				
 					<?php get_sidebar('left-footer'); ?>
-
-					<div class="col-sm-3 col-md 3">
-						<p>footer widget 2</p>
-					</div> 
 					
 					<?php get_sidebar('right-footer'); ?>
 					
@@ -19,7 +15,7 @@
 				
 			</div> <!-- end container -->
 			
-		</div> <!-- end footer-widget-area -->
+		</div> <!-- end footer-widget-area --> 
 		
 		<div class="copyright-container clearfix">
 			
