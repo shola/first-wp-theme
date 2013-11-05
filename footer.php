@@ -7,15 +7,13 @@
 			
 				<div class="row">
 				
+					<?php get_sidebar('left-footer'); ?>
+
 					<div class="col-sm-3 col-md 3">
-							<p>footer widget 1</p>
-						</div>
-						<div class="col-sm-3 col-md 3">
-							<p>footer widget 2</p>
-						</div>
-						<div class="col-sm-6 col-md 6">
-							<p>footer widget 3</p>
-						</div>
+						<p>footer widget 2</p>
+					</div> 
+					
+					<?php get_sidebar('right-footer'); ?>
 					
 				</div> <!-- end row -->
 				
@@ -36,10 +34,10 @@
 		
 	</footer>
 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-	<!-- JavaScript -->
-	<script src="js/jquery-1.8.2.min.js"></script>
-	<script src="js/scripts.js"></script>
+	<?php wp_footer(); ?>
 
 </body>
 </html>
