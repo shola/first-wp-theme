@@ -31,9 +31,8 @@
 								</figure>
 							
 							<?php endif; ?>	
-							
-							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-							<p><a href="">Read more...</a></p>
+
+							<?php the_content(__('Read more &raquo;', 'mike-framework')); ?>
 							
 						</article>
 						
@@ -89,8 +88,9 @@
 					
 					<div class="articles-nav clearfix">
 						
-						<p class="articles-nav-prev"><a href="">&laquo; Older Posts</a></p>
-						<p class="articles-nav-next"><a href="">Newer Posts &raquo;</a></p>
+						<!-- in this case, previous posts are on the lowest numbered pages, which are the newest ones. -->
+						<p class="articles-nav-prev"><?php next_posts_link(__('&larr; Older Posts', 'mike-framework')); ?></p>
+						<p class="articles-nav-next"><?php previous_posts_link(__('Newer Posts &rarr;', 'mike-framework')); ?></p>
 						
 					</div> <!-- end articles-nav -->
 					
