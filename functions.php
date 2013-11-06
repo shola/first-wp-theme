@@ -83,18 +83,15 @@
 
 					<figure class="comment-avatar">
 						<?php 
-							if ($comment->comment_parent != 0) { // if this is true, the comment is a child
-								$avatar_size = 64; //pixels
-							} else {														// parents get bigger avatars
-								$avatar_size = 80; 
-							}
+							// if this is true, the comment is a child and gets a smaller avatar
+							($comment->comment_parent != 0) ? $avatar_size = 64 : $avatar_size = 80;
 
 							echo get_avatar($comment, $avatar_size);
 
 						?>
 					</figure>
 
-					<?php if($comment->comment_approved == '0'); ?>
+					<?php if($comment->comment_approved == '0') : ?>
 						<!-- 0 means it is not approved -->
 						<p class="awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'mike-framework'); ?></p>
 					<?php endif; ?>
