@@ -113,4 +113,13 @@
 		<?php endif;
 	}
 
+	// Custom Comments form
+	function adaptive_custom_comment_form($defaults) {
+		$defaults['comment_notes_before'] = '';
+
+		return $defaults;
+	}
+
+	add_filter('comment_form_defaults', 'adaptive_custom_comment_form'); // hooks custom fn to default fn
+
 ?>
