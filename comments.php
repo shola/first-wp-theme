@@ -11,4 +11,13 @@ if (post_password_required()) : ?>
 		<?php return; ?>
 	</p>
 
+<?php endif; 
+
+if(have_comments()) : ?>
+
+display comments
+
+<?php elseif (!comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
+
+	<p><?php _e('Comments are closed', 'mike-framework'); ?></p>
 <?php endif; ?>
