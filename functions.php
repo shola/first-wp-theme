@@ -52,9 +52,37 @@
 		add_theme_support('post-thumbnails', array('post'));
 	}
 
-	// Function to control display of comments 
-	function adaptive_comments(){
+	// Function to control display of individual comments 
+	function adaptive_comments($comment, $args, $depth){
+		// // get_comment_type needs to access a global variable, comment. we need to assign that
+		// // variable the value of $comment that is read in as a parameter to this function. this
+		// // was not necessary for me, but could be an important bug fix later.
+		// $GLOBALS['comment'] = $comment;
 		
+		if (get_comment_type() == 'pingback' || get_comment_type() == 'trackback') : ?>
+
+			pingbacks
+
+		<?php elseif (get_comment_type() == "comment") : ?>
+
+			<li id='comment-<?php comment_ID(); ?>'>
+				<article <?php comment_class(); ?>>
+					<header>
+						<h5><a href="">Adi Purdila</a></h5>
+						<p><span>on Sep 12th, 2012 at 3:05 PM - </span><a href="">Reply</a></p>
+					</header>
+
+					<figure class="comment-avatar">
+						<a href=""><img src="http://lorempixel.com/80/80" alt="Avatar" /></a>
+					</figure>
+
+					<p class="awaiting-moderation">Your comment is awaiting moderation.</p>
+
+					<p>This is the actual comment. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				</article>							
+			</li>
+
+		<?php endif;
 	}
 
 ?>
