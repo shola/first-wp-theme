@@ -19,6 +19,10 @@ if(have_comments()) : ?>
 	<h3><?php comments_number(__('No Comments', 'mike-framework'),
 														__('1 Comment', 'mike-framework'),
 														__('% Comments', 'mike-framework')); ?></h3>
+	<ol class="commentslist">
+		 <?php wp_list_comments(); ?>
+	</ol>
+
 
 <?php elseif (!comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
 
