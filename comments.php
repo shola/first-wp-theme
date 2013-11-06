@@ -15,7 +15,10 @@ if (post_password_required()) : ?>
 
 if(have_comments()) : ?>
 
-display comments
+	<a href="#respond" class="article-add-comments">+</a>
+	<h3><?php comments_number(__('No Comments', 'mike-framework'),
+														__('1 Comment', 'mike-framework'),
+														__('% Comments', 'mike-framework')); ?></h3>
 
 <?php elseif (!comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
 
