@@ -60,8 +60,8 @@
 
 					<div class="article-author">
 						
-						<h5>Article by <a href="">Adi Purdila</a></h5>
-						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+						<h5>Article by <?php the_author_posts_link(); ?></h5>
+						<?php the_author_meta('description'); ?>
 						
 					</div> <!-- end article-author -->
 
