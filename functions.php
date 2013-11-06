@@ -94,11 +94,15 @@
 						?>
 					</figure>
 
-					<p class="awaiting-moderation">Your comment is awaiting moderation.</p>
+					<?php if($comment->comment_approved == '0'); ?>
+						<!-- 0 means it is not approved -->
+						<p class="awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'mike-framework'); ?></p>
+					<?php endif; ?>
 
-					<p>This is the actual comment. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+					<?php comment_text(); ?>
+
 				</article>							
-			</li>
+			<!-- </li> this li tag must be removed because WP will automatically add it-->
 
 		<?php endif;
 	}
