@@ -23,12 +23,12 @@ if(have_comments()) : ?>
 		 <?php wp_list_comments('callback=adaptive_comments'); ?>
 	</ol>
 
-	<div class="comments-nav-section clearfix">
-						
-		<p class="fl"><a href="">&larr; Older Comments</a></p>
-		<p class="fr"><a href="">Newer Comments &rarr;</a></p>
-		
-	</div> <!-- end comments-nav-section -->
+	<?php if(get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
+		<div class="comments-nav-section clearfix">
+			<p class="fl"><?php previous_comments_link(__('&larr; Older Comments', 'mike-framework')); ?></p>
+			<p class="fr"><?php next_comments_link(__('Newer Comments &rarr; ', 'mike-framework')); ?></p>
+		</div> <!-- end comments-nav-section -->
+	<?php endif; ?>
 
 
 <?php elseif (!comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
@@ -36,7 +36,7 @@ if(have_comments()) : ?>
 	<p><?php _e('Comments are closed', 'mike-framework'); ?></p>
 <?php endif; 
 
-// Display comment form
+// Display comment form 
 comment_form();
 
 ?>
