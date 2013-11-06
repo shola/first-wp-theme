@@ -116,10 +116,32 @@
 	// Custom Comments form
 	function adaptive_custom_comment_form($defaults) {
 		$defaults['comment_notes_before'] = '';
+		$defaults['id_form'] = 'comment-form';
+		$defaults['comment_field'] = '<p>
+																		<textarea name="comment" id="comment" cols="30" rows="10">
+																		</textarea>
+																	</p>';
 
 		return $defaults;
 	}
-
 	add_filter('comment_form_defaults', 'adaptive_custom_comment_form'); // hooks custom fn to default fn
+
+
+	function adaptive_custom_comment_fields(){
+		$commenter = wp_get_current_commenter();
+		$req = get_option('require_name_email'); //set to a boolean
+		$aria_req = ($req ? " aria-required='true'" : ' ');
+
+		// esc_attr (escape attributes) automatically encodes special characters from strings to HTML codes
+		$fields = array(
+			'author' => '<p>' . 
+										'<input type="text" name="author" id="author" value="' . esc_attr($commenter['comment_author']) . '" ' . $aria_req .' />' .
+										'<label for="author">' . __('Name', 'mike-framework') . ' ' . ($req ? '*' : '') . '</label>' . 
+									 '</p>'
+		);
+
+		return $fields;
+	}
+	add_filter('comment_form_default_fields', 'adaptive_custom_comment_fields');
 
 ?>
