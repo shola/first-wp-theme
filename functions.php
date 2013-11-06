@@ -82,7 +82,16 @@
 					</header>
 
 					<figure class="comment-avatar">
-						<a href=""><img src="http://lorempixel.com/80/80" alt="Avatar" /></a>
+						<?php 
+							if ($comment->comment_parent != 0) { // if this is true, the comment is a child
+								$avatar_size = 64; //pixels
+							} else {														// parents get bigger avatars
+								$avatar_size = 80; 
+							}
+
+							echo get_avatar($comment, $avatar_size);
+
+						?>
 					</figure>
 
 					<p class="awaiting-moderation">Your comment is awaiting moderation.</p>
