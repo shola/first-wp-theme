@@ -20,8 +20,15 @@ if(have_comments()) : ?>
 														__('1 Comment', 'mike-framework'),
 														__('% Comments', 'mike-framework')); ?></h3>
 	<ol class="commentslist">
-		 <?php wp_list_comments(); ?>
+		 <?php wp_list_comments('callback=adaptive_comments'); ?>
 	</ol>
+
+	<div class="comments-nav-section clearfix">
+						
+		<p class="fl"><a href="">&larr; Older Comments</a></p>
+		<p class="fr"><a href="">Newer Comments &rarr;</a></p>
+		
+	</div> <!-- end comments-nav-section -->
 
 
 <?php elseif (!comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>

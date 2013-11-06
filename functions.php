@@ -20,7 +20,7 @@
 				'before_widget' => '<div class="sidebar-widget">',
 				'after_widget' => '</div> <!-- end sidebar-widget -->',
 				'before_title' => '<h4>',
-				'after_title' => '</h4>'
+				'after_title' => '</h4>' 
 		));
 
 		register_sidebar(
@@ -44,6 +44,17 @@
 				'before_title' => '<h4>',
 				'after_title' => '</h4>'
 		));
+	}
+
+	if(function_exists('add_theme_support')) {
+		add_theme_support('post-formats', array('link', 'quote', 'gallery'));
+
+		add_theme_support('post-thumbnails', array('post'));
+	}
+
+	// Function to control display of comments 
+	function adaptive_comments(){
+		
 	}
 
 ?>
