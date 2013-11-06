@@ -20,4 +20,9 @@ display comments
 <?php elseif (!comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
 
 	<p><?php _e('Comments are closed', 'mike-framework'); ?></p>
-<?php endif; ?>
+<?php endif; 
+
+// Display comment form
+comment_form();
+
+?>
