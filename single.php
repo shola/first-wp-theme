@@ -42,8 +42,17 @@
 						<?php endif; ?>
 							
 						<div>
+
+							<!-- Here are 2 ways to accomplish page navigation -->
 							
-							<?php wp_link_pages('before=<p class="post-navigation">&after="</p>"&pagelink=Page %'); ?>
+							<!-- <?php wp_link_pages('before=<p class="post-navigation">&after="</p>"&pagelink=Page %'); ?> -->
+
+							<?php $args = array(
+								'before' => '<p class="post-navigation">',
+								'after' => "</p>",
+								'pagelink' => 'Page %'
+							); ?>
+							<?php wp_link_pages($args); ?>
 							
 						</div> <!-- end post-navigation -->
 						
