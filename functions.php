@@ -54,6 +54,9 @@
 
 	// Function to control display of individual comments 
 	function adaptive_comments($comment, $args, $depth){
+		// $comment: comment to be displayed
+		// $args: list of arguments
+		// $depth: level of nesting of particular comment
 		// // get_comment_type needs to access a global variable, comment. we need to assign that
 		// // variable the value of $comment that is read in as a parameter to this function. this
 		// // was not necessary for me, but could be an important bug fix later.
@@ -66,10 +69,16 @@
 		<?php elseif (get_comment_type() == "comment") : ?>
 
 			<li id='comment-<?php comment_ID(); ?>'>
-				<article <?php comment_class(); ?>>
+				<article <?php comment_class('clearfix'); ?>>
 					<header>
-						<h5><a href="">Adi Purdila</a></h5>
-						<p><span>on Sep 12th, 2012 at 3:05 PM - </span><a href="">Reply</a></p>
+						<h5><?php comment_author_link(); ?></h5>
+						<p>
+							<span>on <?php comment_date(); ?> at <?php comment_time(); ?> - </span>
+							<!-- adds a reply link from a comment to the post it comments on -->
+							<?php comment_reply_link(array_merge(
+																										$args, array('depth' => $depth, 
+																																 'max_depth' => $args['max_depth']))); ?>
+						</p> 
 					</header>
 
 					<figure class="comment-avatar">
