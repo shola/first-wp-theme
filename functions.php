@@ -64,7 +64,16 @@
 		
 		if (get_comment_type() == 'pingback' || get_comment_type() == 'trackback') : ?>
 
-			pingbacks
+			<li class="pingback" id="comment-<?php comment_ID(); ?>">
+				<article <?php comment_class(); ?>>
+					<header>
+						<h5><?php _e('pingback', 'mike-framework'); ?></h5>
+						<p><?php edit_comment_link(); ?></p> <!-- quick edit link for admin -->
+					</header>
+					
+					<p><?php comment_author_link(); ?></p>
+				</article>							
+			</li>
 
 		<?php elseif (get_comment_type() == "comment") : ?>
 
