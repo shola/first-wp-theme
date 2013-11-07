@@ -137,6 +137,14 @@
 			'author' => '<p>' . 
 										'<input type="text" name="author" id="author" value="' . esc_attr($commenter['comment_author']) . '" ' . $aria_req .' />' .
 										'<label for="author">' . __('Name', 'mike-framework') . ' ' . ($req ? '*' : '') . '</label>' . 
+									 '</p>',
+			'email' => '<p>' . 
+										'<input type="text" name="email" id="email" value="' . esc_attr($commenter['comment_author_email']) . '" ' . $aria_req .' />' .
+										'<label for="email">' . __('Email', 'mike-framework') . ' ' . ($req ? '*' : '') . '</label>' . 
+									 '</p>',
+			'url' => '<p>' . 
+										'<input type="text" name="url" id="url" value="' . esc_attr($commenter['comment_author_url']) . '" ' '/>' .
+										'<label for="url">' . __('Website', 'mike-framework') . '</label>' . 
 									 '</p>'
 		);
 
