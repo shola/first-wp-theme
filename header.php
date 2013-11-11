@@ -36,7 +36,10 @@
       <div class="container">
       
         <nav class="top-menu-navigation clearfix">
-          top nav
+          <?php 
+            wp_nav_menu(array(
+              'theme_location' => 'top-menu'
+            )); ?>
         </nav>
         
         <!-- <a href="#" class="small-button blue" id="rwd-top-nav-btn"><?php _e('Select a page', 'mike-framework') ?></a> -->
@@ -52,24 +55,27 @@
       
         <div class="col-sm-3 col-md-3 logo-container">
           
-          <h1 class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php print IMAGES; ?>/logo.png" alt="<?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>" /></a></h1>
+          <h1 class="logo"><a href="<?php echo home_url(); ?>">Mike's Blog</a></h1>
           
-        </div> <!-- end col-sm-3 col-md-3 -->
+        </div> 
         
-        <div class="col-sm-9 col-md-9 clearfix">
+       <!--  <div class="col-sm-9 col-md-9 clearfix">
           
           <figure class="ad-block fr top-ad">
             <a href=""><img src="http://lorempixel.com/468/60" alt="Ad" /></a>
           </figure>
           
-        </div> <!-- end col-sm-9 col-md-9 -->
+        </div> -->
         
       </div> <!-- end row -->
       
       <hr />
       
       <nav class="main-navigation clearfix">
-       main navigation
+       <?php 
+            wp_nav_menu(array(
+              'theme_location' => 'main-menu'
+            )); ?>
       </nav>
 
       <!-- <a href="#" class="small-button blue" id="rwd-main-nav-btn"><?php _e('Select a page') ?></a> -->
