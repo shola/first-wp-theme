@@ -94,36 +94,43 @@
 						
 						</header>
 
+						<?php if (isset($email_sent) && $email_sent) : ?>
+							<h3><?php _e('Success!', 'mike-framework'); ?></h3>
+							<p><?php _e('You have successfully sent the message.', 'mike-framework'); ?></p>
+						<?php elseif (isset($email_sent_error) && $email_sent_error) : ?>
+							<h3><?php _e('Error!', 'mike-framework'); ?></h3>
+							<p><?php _e('We could not send the message at this time. Please try again later.', 'mike-framework'); ?></p>
+						<?php else : ?>
+							<hr/>
+
+							<form action="<?php the_permalink(); ?>" method="post" id="contact-form">
+								<p>
+									<input type="text" value="" name="contact-author" id="contact-author" />
+									<label for="contact-author">Name *</label>
+								</p>
+								<p>
+									<input type="text" value="" name="contact-email" id="contact-email" />
+									<label for="contact-email">Email *</label>
+								</p>
+								<p>
+									<input type="text" value="" name="contact-url" id="contact-url" />
+									<label for="contact-url">Website</label>
+								</p>
+								<p>
+									<textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
+								</p>
+
+								<!-- used to verify that form was submitted, i combined the submit button with this code from Adi because it makes more sense to me. to make it stock, uncomment code below, and remove name and id from the p>input -->
+								<!-- <input type="hidden" name="contact-submit" id="contact-submit" value="true"> -->
+
+								<p><input type="submit" name="contact-submit" id="contact-submit" value="Send Message" /></p>
+							</form>
+						<?php endif; ?>
+
 						<hr class="image-replacement"/>
 						
 						<?php the_content(); ?>
 						
-						<hr/>
-
-						<form action="<?php the_permalink(); ?>" method="post" id="contact-form">
-							<p>
-								<input type="text" value="" name="contact-author" id="contact-author" />
-								<label for="contact-author">Name *</label>
-							</p>
-							<p>
-								<input type="text" value="" name="contact-email" id="contact-email" />
-								<label for="contact-email">Email *</label>
-							</p>
-							<p>
-								<input type="text" value="" name="contact-url" id="contact-url" />
-								<label for="contact-url">Website</label>
-							</p>
-							<p>
-								<textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
-							</p>
-
-							<!-- used to verify that form was submitted, i combined the submit
-										button with this code from Adi because it makes more sense to me -->
-							<!-- <input type="hidden" name="contact-submit" id="contact-submit" value="true"> -->
-
-							<p><input type="submit" name="contact-submit" id="contact-submit" value="Send Message" /></p>
-						</form>
-
 					</article>
 
 				<?php endwhile; else : ?>
