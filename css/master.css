@@ -734,7 +734,7 @@ img.centered {
 .comments-nav-section {
   margin: 3em 0;
 }
-#comment-form p label {
+#comment-form p label, #contact-form p label {
   display: inline;
   font-size: 12px;
 }
