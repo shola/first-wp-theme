@@ -2,7 +2,6 @@
 /*
 	Template Name: Archives Page
 */
-
 ?>
 
 <?php get_header(); ?>
@@ -37,6 +36,7 @@
 						</ul>
 						
 					</article>
+				<?php endwhile; endif; ?>
 
 				</div> <!-- end articles -->
 				
