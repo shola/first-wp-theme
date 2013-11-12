@@ -15,8 +15,10 @@
 	$error_name = false;
 	$error_email = false;
 	$error_message = false;
-	
-	
+
+	if (isset($_POST['contact-submit'])) {
+		echo "form submit";
+	}
 
 ?>
 
@@ -52,7 +54,7 @@
 						
 						<hr/>
 
-						<form action="" method="post" id="contact-form">
+						<form action="<?php the_permalink(); ?>" method="post" id="contact-form">
 							<p>
 								<input type="text" value="" name="contact-author" id="contact-author" />
 								<label for="contact-author">Name *</label>
@@ -68,7 +70,10 @@
 							<p>
 								<textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
 							</p>
-							
+
+							<!-- used to verify that form was submitted -->
+							<input type="hidden" name="contact-submit" id="contact-submit" value="true">
+
 							<p><input type="submit" value="Send Message" /></p>
 						</form>
 
