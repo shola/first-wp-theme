@@ -9,41 +9,29 @@
 				
 				<div class="articles">
 
-					<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+					<?php if (have_posts()) : ?>
+
+						<div class="additionl-content">
+
+							<h5> 
+								<?php _e('Search Results for: ', 'mike-framework'); ?>
+								<?php get_search_query(); ?>
+							</h5>
+
+						</div>
+
+					<?php while(have_posts()) : the_post(); ?>
 
 						<?php get_template_part('content', get_post_format()); ?>
 
-						<article <?php post_class('clearfix'); ?> id="post-<?php the_ID(); ?>">
-
-							<header>
-								
-								<?php 
-									if (comments_open() && !post_password_required()) {
-										comments_popup_link('0', '1', '%', 'article-meta-comments');
-									}
-								?>
-								<p class="article-meta-categories"><?php the_category('&nbsp;/&nbsp;'); ?></p>
-								<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-								<p class="article-meta-extra"><?php the_time(get_option('date_format')); ?>, by <?php the_author_posts_link(); ?></p>
-								
-							</header>
-							
-							<?php if(has_post_thumbnail()) : ?>
-								<figure class="article-preview-image">
-									<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-								</figure>
-							
-							<?php endif; ?>	
-
-							<?php the_content(__('Read more &raquo;', 'mike-framework')); ?>
-							
-						</article>
-						
-						<hr class="fancy-hr" />
-
 					<?php endwhile; else : ?>
-						<h1><?php _e('No posts were found', 'mike-framework') ?></h1>
+
+						<article>
+							<h1><?php _e('No were found matching your criteria. Please try something else.', 'mike-framework') ?></h1>
+						</article>
+
 					<?php endif; ?>
+					
 					<hr class="fancy-hr" />
 				
 					
