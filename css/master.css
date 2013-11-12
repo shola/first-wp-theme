@@ -629,6 +629,10 @@ img.centered {
 .article-author p {
   margin-bottom: 0;
 }
+
+.additional-content {
+  padding: 0 3em;
+}
 /* ---------- COMMENTS ---------- */
 .comments-area {
   margin-top: 3em;
