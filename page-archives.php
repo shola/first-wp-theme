@@ -39,7 +39,7 @@
 
 						<h4><?php _e('Archives by Subject', 'mike-framework'); ?></h4>
 						<ul>
-							<?php wp_list_categories(); ?>
+							<?php wp_list_categories('title_li='); ?>
 						</ul>
 						
 					</article>
