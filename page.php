@@ -13,27 +13,15 @@
 					<article class="clearfix">
 						
 						<header>
-
-							<?php 
-								if (comments_open() && !post_password_required()) {
-									comments_popup_link('0', '1', '%', 'article-meta-comments');
-								}
-							?>
-							<p class="article-meta-categories"><?php the_category('&nbsp;/&nbsp;'); ?></p>
+							
 							<h1><?php the_title(); ?></a></h1>
-							<p class="article-meta-extra"><?php the_time(get_option('date_format')); ?> at <?php the_time(get_option('time_format')); ?>, by <?php the_author_posts_link(); ?></p>
+							<?php if(current_user_can('edit_post', $post->ID)) {
+																// BEFORE                         AFTER
+								edit_post_link(__('Edit This', 'mike-framework'), '<p class="article-meta-extra">',	'</p>'); 
+							}?>
 						
 						</header>
 						
-						<?php if(has_post_thumbnail()) : ?>
-
-							<figure class="article-full-image">
-								<?php the_post_thumbnail(); ?>
-							</figure>
-
-						<?php else : ?>
-							<hr />
-						<?php endif; ?>
 						
 						<?php the_content(); ?>
 						
