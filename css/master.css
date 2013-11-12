@@ -973,6 +973,16 @@ form .p-errors input:hover, form .p-errors input:focus,
 form .p-errors textarea:hover, form .p-errors textarea:focus {
   border: 1px solid #f87c7c;
 }
+
+.search-form-404 {
+  margin-bottom: 2.5em;
+}
+
+/*target input inside form*/
+.search-form-404 input[type='text'] {
+  width: 50%;
+}
+
 /* ---------- FOOTER ---------- */
 .footer-widget-area {
   background: white;

@@ -17,12 +17,14 @@
 						
 						</header>
 
-						<hr class="image-replacement"/>
+						<hr>
 
 						<?php _e("Oops, it seems you're looking for something that's not here. Please try again.", 'mike-framework'); ?>
 
-						<?php get_search_form(); ?>
-						
+						<div class="search-form-404">
+							<?php get_search_form(); ?>
+						</div>
+
 					</article>
 					
 				</div> <!-- end articles -->
