@@ -15,7 +15,7 @@
 
 							<h5> 
 								<!-- true will display title, false will output a php string -->
-								<?php single_cat_title(__("Showing posts from: ", "mike-framework"), true); ?>
+								<?php single_tag_title(__("Tag archives for: ", "mike-framework"), true); ?>
 							</h5>
 
 						</div>
