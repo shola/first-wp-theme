@@ -48,20 +48,21 @@
 				
 					
 
+
 					<article>
 						
 						<header>
 							
 							<span class="post-format-quote"></span>
 							<p class="article-meta-categories"><a href="">Category</a></p>
-							<p class="article-meta-extra">September 20th, 2012, by <a href="">Adi Purdila</a></p>
+							<p class="article-meta-extra">November 10th, 2013, by <a href="">Mike Situ</a></p>
 							
 						</header>
 						
 						<div class="quote-container">
 							
 							<blockquote>This is a very simple quote!</blockquote>
-							<cite>- Adi Purdila</cite>
+							<cite>- Mike Situ</cite>
 							
 						</div> <!-- end quote-container -->
 						
@@ -75,14 +76,14 @@
 							
 							<span class="post-format-url"></span>
 							<p class="article-meta-categories"><a href="">Category</a></p>
-							<p class="article-meta-extra">September 20th, 2012, by <a href="">Adi Purdila</a></p>
+							<p class="article-meta-extra">September 20th, 2012, by <a href="">Mike Situ</a></p>
 							
 						</header>
 						
 						<div class="url-container">
 							
 							<p>This will be the link description!</p>
-							<span><a href="http://webdesign.tutsplus.com">http://webdesign.tutsplus.com</a></span>
+							<span><a href="http:mikesitu.com/about.html">http:mikesitu.com/about.html</a></span>
 							
 						</div> <!-- end quote-container -->
 						
