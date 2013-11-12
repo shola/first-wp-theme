@@ -12,12 +12,38 @@
 	
 	}
 
-	$error_name = false;
-	$error_email = false;
-	$error_message = false;
-
+	// form submission detection/validation
 	if (isset($_POST['contact-submit'])) {
-		echo "form submit";
+		$error_name = false;
+		$error_email = false;
+		$error_message = false;
+
+		//trim strips trail/lead whitespace from string
+		$name = trim($_POST['contact-author']);
+		$email = trim($_POST['contact-email']);
+		$message = trim($_POST['contact-message']);
+		$website = stripslashes(trim($_POST['contact-url'])); //unquotes a quoted string, needed for large texts
+		$receiver_email = '';
+		
+		if ($name === '') {
+			$error_name = true;
+			$name = '';
+		} 
+
+		if ($email === '' || !isEmail($email)) {
+			$error_email = true;
+			$email = '';
+		} 
+
+		if ($message  === '') {
+			$error_message  = true;
+			$message  = '';
+		} 
+
+		if ($error_name || $error_email || $error_message) {
+			
+		}
+
 	}
 
 ?>
@@ -71,10 +97,11 @@
 								<textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
 							</p>
 
-							<!-- used to verify that form was submitted -->
-							<input type="hidden" name="contact-submit" id="contact-submit" value="true">
+							<!-- used to verify that form was submitted, i combined the submit
+										button with this code from Adi because it makes more sense to me -->
+							<!-- <input type="hidden" name="contact-submit" id="contact-submit" value="true"> -->
 
-							<p><input type="submit" value="Send Message" /></p>
+							<p><input type="submit" name="contact-submit" id="contact-submit" value="Send Message" /></p>
 						</form>
 
 					</article>
