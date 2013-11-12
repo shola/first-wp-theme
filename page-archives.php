@@ -34,6 +34,13 @@
 						<ul>
 						    <?php wp_get_archives('type=monthly'); ?>
 						</ul>
+
+						<hr />
+
+						<h4><?php _e('Archives by Subject', 'mike-framework'); ?></h4>
+						<ul>
+							<?php wp_list_categories(); ?>
+						</ul>
 						
 					</article>
 				<?php endwhile; endif; ?>
