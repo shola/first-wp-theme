@@ -42,19 +42,28 @@
 
 		if (!($error_name || $error_email || $error_message)) {
 			$subject = 'You have been contacted by ' . $name;
+
 			$body = "You have been contacted by $name. Their message is:" . PHP_EOL . PHP_EOL; // you can use variable names directly in double-quoted strings!
 			$body .= $message . PHP_EOL . PHP_EOL; // PHP_EOL is a blank line
 			$body .= "You can contact $name via email at $email.";
-
 			if ($website != '') {
 				$body .= " or visit their website: $website";
 			}
-
 			$body .= PHP_EOL . PHP_EOL;
 
-			
-		}
+			$headers = "From $email" . PHP_EOL;
+			$headers .= "Reply-To: $email" . PHP_EOL;
+			$headers .= "MIME-Version: 1.0" . PHP_EOL;
+			$headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
+			$headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL; 
 
+			// evals to true if messages are sent correctly
+			if (mail($receiver_email, $subject, $body, $headers)) {
+				$email_sent = true;
+			} else {
+				$email_sent_error = true;
+			}
+		}
 	}
 
 ?>
