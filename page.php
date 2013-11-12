@@ -21,14 +21,11 @@
 							}?>
 						
 						</header>
-						
+
+						<hr class="image-replacement"/>
 						
 						<?php the_content(); ?>
 						
-						<?php if(has_tag()) : ?>
-							<p class="tag-container"><?php the_tags(); ?></p>
-						<?php endif; ?>
-							
 						<div>
 
 							<!-- Here are 2 ways to accomplish page navigation -->
@@ -45,13 +42,6 @@
 						</div> <!-- end post-navigation -->
 						
 					</article>
-
-					<div class="article-author">
-						
-						<h5>Article by <?php the_author_posts_link(); ?></h5>
-						<?php the_author_meta('description'); ?>
-						
-					</div> <!-- end article-author -->
 
 				<?php endwhile; else : ?>
 
