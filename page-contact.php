@@ -23,7 +23,7 @@
 		$email = trim($_POST['contact-email']);
 		$message = trim($_POST['contact-message']);
 		$website = stripslashes(trim($_POST['contact-url'])); //unquotes a quoted string, needed for large texts
-		$receiver_email = '';
+		$receiver_email = 'michael.o.situ@gmail.com';
 		
 		if ($name === '') {
 			$error_name = true;
@@ -40,7 +40,18 @@
 			$message  = '';
 		} 
 
-		if ($error_name || $error_email || $error_message) {
+		if (!($error_name || $error_email || $error_message)) {
+			$subject = 'You have been contacted by ' . $name;
+			$body = "You have been contacted by $name. Their message is:" . PHP_EOL . PHP_EOL; // you can use variable names directly in double-quoted strings!
+			$body .= $message . PHP_EOL . PHP_EOL; // PHP_EOL is a blank line
+			$body .= "You can contact $name via email at $email.";
+
+			if ($website != '') {
+				$body .= " or visit their website: $website";
+			}
+
+			$body .= PHP_EOL . PHP_EOL;
+
 			
 		}
 
