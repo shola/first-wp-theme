@@ -263,7 +263,8 @@ blockquote cite {
 }
 /* ---------- TOP NAV ---------- */
 .top-menu-container {
-  background: #2b3039 url('../images/top-container-bg.gif') 0 0;
+  background: #222222 0 0;
+  /*background: #2b3039 url('../images/top-container-bg.gif') 0 0;*/
   margin-bottom: 1.5em;
 }
 .top-menu-container .top-menu-navigation ul {
