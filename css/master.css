@@ -594,6 +594,12 @@ img.centered {
   float: right;
   margin: 1.5em 0 1.5em 2em;
 }
+
+.alignnone,
+div.alignnone img{
+   width: 100%;
+   height: auto;
+}
 .wp-caption {
   text-align: center;
 }
@@ -632,6 +638,12 @@ img.centered {
 
 .additional-content {
   padding: 0 3em;
+}
+
+.attachment-post-thumbnail {
+   width: 50%;
+   height: auto;
+   margin: 1em auto;
 }
 /* ---------- COMMENTS ---------- */
 .comments-area {
