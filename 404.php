@@ -13,13 +13,13 @@
 						
 						<header>
 							
-							<h1><?php _e('Page not found!', 'mike-framework'); ?></a></h1>
+							<h1><?php _e('Page not found!', 'mike-blog'); ?></a></h1>
 						
 						</header>
 
 						<hr>
 
-						<?php _e("Oops, it seems you're looking for something that's not here. Please try again.", 'mike-framework'); ?>
+						<?php _e("Oops, it seems you're looking for something that's not here. Please try again.", 'mike-blog'); ?>
 
 						<div class="search-form-404">
 							<?php get_search_form(); ?>

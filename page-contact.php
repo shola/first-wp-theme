@@ -89,32 +89,32 @@
 							<h1><?php the_title(); ?></a></h1>
 							<?php if(current_user_can('edit_post', $post->ID)) {
 																// BEFORE                         AFTER
-								edit_post_link(__('Edit This', 'mike-framework'), '<p class="article-meta-extra">',	'</p>'); 
+								edit_post_link(__('Edit This', 'mike-blog'), '<p class="article-meta-extra">',	'</p>'); 
 							}?>
 						
 						</header>
 
 						<?php if (isset($email_sent) && $email_sent) : ?>
-							<h3><?php _e('Success!', 'mike-framework'); ?></h3>
-							<p><?php _e('You have successfully sent the message.', 'mike-framework'); ?></p>
+							<h3><?php _e('Success!', 'mike-blog'); ?></h3>
+							<p><?php _e('You have successfully sent the message.', 'mike-blog'); ?></p>
 						<?php elseif (isset($email_sent_error) && $email_sent_error) : ?>
-							<h3><?php _e('Error!', 'mike-framework'); ?></h3>
-							<p><?php _e('We could not send the message at this time. Please try again later.', 'mike-framework'); ?></p>
+							<h3><?php _e('Error!', 'mike-blog'); ?></h3>
+							<p><?php _e('We could not send the message at this time. Please try again later.', 'mike-blog'); ?></p>
 						<?php else : ?>
 							<hr/>
 
 							<form action="<?php the_permalink(); ?>" method="post" id="contact-form">
-								<p <?php if (isset($error_name) && $error_name) echo 'class="p-errors"'; ?>>
+								<p <?php if ($error_name) echo 'class="p-errors"'; ?>>
 									<input type="text" value="<?php if (isset($_POST['contact-author'])) echo $_POST['contact-author']; ?>" name="contact-author" id="contact-author" />
-									<label for="contact-author"><?php _e('Name *', 'mike-framework'); ?></label>
+									<label for="contact-author"><?php _e('Name *', 'mike-blog'); ?></label>
 								</p>
 								<p <?php if ($error_email) echo 'class="p-errors"'; ?>>
 									<input type="text" value="<?php if (isset($_POST['contact-email'])) echo $_POST['contact-email']; ?>" name="contact-email" id="contact-email" />
-									<label for="contact-email"><?php _e('Email *', 'mike-framework'); ?></label>
+									<label for="contact-email"><?php _e('Email *', 'mike-blog'); ?></label>
 								</p>
 								<p>
 									<input type="text" value="<?php if (isset($_POST['contact-url'])) echo stripslashes($_POST['contact-url']); ?>" name="contact-url" id="contact-url" />
-									<label for="contact-url"><?php _e('Website', 'mike-framework'); ?></label>
+									<label for="contact-url"><?php _e('Website', 'mike-blog'); ?></label>
 								</p>
 								<p <?php if ($error_message) echo 'class="p-errors"'; ?>>
 									<textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
@@ -136,7 +136,7 @@
 				<?php endwhile; else : ?>
 
 					<article>
-						<h1><?php _e('No posts were found', 'mike-framework'); ?></h1>
+						<h1><?php _e('No posts were found', 'mike-blog'); ?></h1>
 					</article>
 
 				<?php endif; ?>

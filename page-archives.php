@@ -23,21 +23,21 @@
 							<h1><?php the_title(); ?></a></h1>
 							<?php if(current_user_can('edit_post', $post->ID)) {
 																// BEFORE                         AFTER
-								edit_post_link(__('Edit This', 'mike-framework'), '<p class="article-meta-extra">',	'</p>'); 
+								edit_post_link(__('Edit This', 'mike-blog'), '<p class="article-meta-extra">',	'</p>'); 
 							}?>
 						
 						</header>
 
 						<hr class="image-replacement"/>
 						
-						<h4><?php _e('Archives by Month', 'mike-framework'); ?></h4>
+						<h4><?php _e('Archives by Month', 'mike-blog'); ?></h4>
 						<ul>
 						    <?php wp_get_archives('type=monthly'); ?>
 						</ul>
 
 						<hr />
 
-						<h4><?php _e('Archives by Subject', 'mike-framework'); ?></h4>
+						<h4><?php _e('Archives by Subject', 'mike-blog'); ?></h4>
 						<ul>
 							<?php wp_list_categories('title_li='); ?>
 						</ul>

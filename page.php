@@ -1,3 +1,5 @@
+<!-- custom page template that takes precedence over single.php and index.php -->
+
 <?php get_header(); ?>
 
 	<!-- MAIN CONTENT -->
@@ -17,7 +19,7 @@
 							<h1><?php the_title(); ?></a></h1>
 							<?php if(current_user_can('edit_post', $post->ID)) {
 																// BEFORE                         AFTER
-								edit_post_link(__('Edit This', 'mike-framework'), '<p class="article-meta-extra">',	'</p>'); 
+								edit_post_link(__('Edit This', 'mike-blog'), '<p class="article-meta-extra">',	'</p>'); 
 							}?>
 						
 						</header>
@@ -46,7 +48,7 @@
 				<?php endwhile; else : ?>
 
 					<article>
-						<h1><?php _e('No posts were found', 'mike-framework'); ?></h1>
+						<h1><?php _e('No posts were found', 'mike-blog'); ?></h1>
 					</article>
 
 				<?php endif; ?>

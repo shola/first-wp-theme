@@ -42,7 +42,7 @@
             )); ?>
         </nav>
         
-        <!-- <a href="#" class="small-button blue" id="rwd-top-nav-btn"><?php _e('Select a page', 'mike-framework') ?></a> -->
+        <!-- <a href="#" class="small-button blue" id="rwd-top-nav-btn"><?php _e('Select a page', 'mike-blog') ?></a> -->
         <div class="rwd-top-nav"></div> <!-- end rwd-top-nav -->
         
       </div> <!-- end container -->

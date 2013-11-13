@@ -15,7 +15,7 @@
 
 							<h5> 
 								<!-- true will display title, false will output a php string -->
-								<?php single_cat_title(__("Showing posts from: ", "mike-framework"), true); ?>
+								<?php single_cat_title(__("Showing posts from: ", "mike-blog"), true); ?>
 							</h5>
 
 						</div>
@@ -29,7 +29,7 @@
 					<?php endwhile; else : ?>
 
 						<article>
-							<h1><?php _e('No posts were found. Please try something else.', 'mike- framework') ?></h1>
+							<h1><?php _e('No posts were found. Please try something else.', 'mike- blog') ?></h1>
 						</article>
 
 					<?php endif; ?>
@@ -82,8 +82,8 @@
 					<div class="articles-nav clearfix">
 						
 						<!-- in this case, previous posts are on the lowest numbered pages, which are the newest ones. -->
-						<p class="articles-nav-prev"><?php next_posts_link(__('&larr; Older Posts', 'mike-framework')); ?></p>
-						<p class="articles-nav-next"><?php previous_posts_link(__('Newer Posts &rarr;', 'mike-framework')); ?></p>
+						<p class="articles-nav-prev"><?php next_posts_link(__('&larr; Older Posts', 'mike-blog')); ?></p>
+						<p class="articles-nav-next"><?php previous_posts_link(__('Newer Posts &rarr;', 'mike-blog')); ?></p>
 						
 					</div> <!-- end articles-nav -->
 					

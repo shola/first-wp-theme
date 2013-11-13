@@ -24,7 +24,7 @@
 	
 	<?php endif; ?>	
 
-	<?php the_content(__('Read more &raquo;', 'mike-framework')); ?>
+	<?php the_content(__('Read more &raquo;', 'mike-blog')); ?>
 	
 </article>
 

@@ -4,7 +4,7 @@
 	
 
 	<div class="sidebar-widget">
-		<h4><?php _e('Search', 'mike-framework'); ?></h4>
+		<h4><?php _e('Search', 'mike-blog'); ?></h4>
 		<?php get_search_form(); ?>
 	</div>
 

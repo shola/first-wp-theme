@@ -68,7 +68,7 @@
 				<?php endwhile; else : ?>
 
 					<article>
-						<h1><?php _e('No posts were found', 'mike-framework'); ?></h1>
+						<h1><?php _e('No posts were found', 'mike-blog'); ?></h1>
 					</article>
 
 				<?php endif; ?>

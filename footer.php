@@ -21,7 +21,7 @@
 			
 			<div class="container">
 			
-				<p class="top-link-footer"><a href="#top"><?php _e('Go To Top', 'mike-framework'); ?></a></p>
+				<p class="top-link-footer"><a href="#top"><?php _e('Go To Top', 'mike-blog'); ?></a></p>
       	<p class="text-center muted">&copy Copyright <?php echo date('Y'); ?> <a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></p>
 			
 			</div> <!-- end container -->
