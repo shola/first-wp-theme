@@ -90,6 +90,8 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  max-width: 100%;
+  height: auto;
 }
 input {
   margin: 0;
@@ -593,12 +595,6 @@ img.centered {
 .alignright {
   float: right;
   margin: 1.5em 0 1.5em 2em;
-}
-
-.alignnone,
-div.alignnone img{
-   width: 100%;
-   height: auto;
 }
 .wp-caption {
   text-align: center;
