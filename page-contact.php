@@ -104,11 +104,11 @@
 							<hr/>
 
 							<form action="<?php the_permalink(); ?>" method="post" id="contact-form">
-								<p <?php if ($error_name) echo 'class="p-errors"'; ?>>
+								<p <?php if (isset($error_name) && $error_name) echo 'class="p-errors"'; ?>>
 									<input type="text" value="<?php if (isset($_POST['contact-author'])) echo $_POST['contact-author']; ?>" name="contact-author" id="contact-author" />
 									<label for="contact-author"><?php _e('Name *', 'mike-blog'); ?></label>
 								</p>
-								<p <?php if ($error_email) echo 'class="p-errors"'; ?>>
+								<p <?php if (isset($error_email) && $error_email) echo 'class="p-errors"'; ?>>
 									<input type="text" value="<?php if (isset($_POST['contact-email'])) echo $_POST['contact-email']; ?>" name="contact-email" id="contact-email" />
 									<label for="contact-email"><?php _e('Email *', 'mike-blog'); ?></label>
 								</p>
@@ -116,7 +116,7 @@
 									<input type="text" value="<?php if (isset($_POST['contact-url'])) echo stripslashes($_POST['contact-url']); ?>" name="contact-url" id="contact-url" />
 									<label for="contact-url"><?php _e('Website', 'mike-blog'); ?></label>
 								</p>
-								<p <?php if ($error_message) echo 'class="p-errors"'; ?>>
+								<p <?php if (isset($error_message) && $error_message) echo 'class="p-errors"'; ?>>
 									<textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
 								</p>
 
