@@ -279,8 +279,8 @@ blockquote cite {
   border-color: #080808;
   display: inline-block;
   font-size: 14px;
-  height: 40px;
-  line-height: 20px;
+  height: 30px;
+  line-height: 15px;
   margin-right: 1em;
   position: relative;
   padding-right: 1em;
@@ -1079,11 +1079,12 @@ form .p-errors textarea:hover, form .p-errors textarea:focus {
 }
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .main-sidebar,
+/*display nav menus for all screen sizes*/
+/*  .main-sidebar,
   .top-menu-navigation,
   .main-navigation {
     display: none;
-  }
+  }*/
   .article-container-fix {
     width: 724px;
   }
@@ -1095,12 +1096,13 @@ form .p-errors textarea:hover, form .p-errors textarea:focus {
 }
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-  .main-sidebar,
+/*display nav menus for all screen sizes*/
+/*  .main-sidebar,
   .top-menu-navigation
 ,  .main-navigation,
   .top-ad {
     display: none;
-  }
+  }*/
   .article-container-fix {
     width: 724px;
   }
