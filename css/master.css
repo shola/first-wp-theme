@@ -390,7 +390,7 @@ blockquote cite {
 }
 .main-navigation ul > li ul {
   opacity: 1;
-  filter: alpha(opacity=0);
+  filter: alpha(opacity=10);
   visibility: hidden;
   -webkit-transition: opacity 0.2s ease-in;
   -moz-transition: opacity 0.2s ease-in;
@@ -400,15 +400,12 @@ blockquote cite {
   background: white;
   left: -1em;
   border: 1px solid #d7d7d7;
-  /*fix width of submenus*/
-  max-width: 200px;
-  width: 200px;
+  background-color: white;
 }
 .main-navigation ul > li ul li {
   float: none;
   white-space: nowrap;
   border-bottom: 1px solid #f1f1f1;
-  z-index:999;
 }
 .main-navigation ul > li ul li a {
   padding: 0 1em;
@@ -439,6 +436,18 @@ blockquote cite {
 }
 .main-navigation ul > li:hover > a {
   color: #2b3039;
+}
+.sub-menu {
+  /*fix width of submenus*/
+  max-width: 500px;
+  width: auto;
+  opacity: 1;
+}
+
+/*let submenu cover all menuitems*/
+.main-navigation .menu-item-has-children:hover {
+   opacity: 1;
+   z-index: 9999;
 }
 /* ---------- ARTICLES ---------- */
 .articles {
