@@ -365,7 +365,7 @@ blockquote cite {
 .main-navigation ul > li {
   float: left;
   position: relative;
-  z-index: 999999;
+  z-index: 100;
 }
 .main-navigation ul > li a {
   color: #626d82;
@@ -376,6 +376,7 @@ blockquote cite {
   margin-right: 1em;
   padding-right: 1em;
   position: relative;
+  z-index:200;
 }
 .main-navigation ul > li a:hover {
   color: #2b3039;
@@ -388,7 +389,7 @@ blockquote cite {
   color: #d2d6dd;
 }
 .main-navigation ul > li ul {
-  opacity: 0;
+  opacity: 1;
   filter: alpha(opacity=0);
   visibility: hidden;
   -webkit-transition: opacity 0.2s ease-in;
@@ -399,11 +400,15 @@ blockquote cite {
   background: white;
   left: -1em;
   border: 1px solid #d7d7d7;
+  /*fix width of submenus*/
+  max-width: 200px;
+  width: 200px;
 }
 .main-navigation ul > li ul li {
   float: none;
   white-space: nowrap;
   border-bottom: 1px solid #f1f1f1;
+  z-index:999;
 }
 .main-navigation ul > li ul li a {
   padding: 0 1em;
