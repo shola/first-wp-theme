@@ -365,6 +365,7 @@ blockquote cite {
 .main-navigation ul > li {
   float: left;
   position: relative;
+  z-index: 999999;
 }
 .main-navigation ul > li a {
   color: #626d82;
