@@ -441,12 +441,12 @@ blockquote cite {
   /*fix width of submenus*/
   max-width: 500px;
   width: auto;
-  opacity: 1;
+  /*opacity: 1;*/
 }
 
 /*let submenu cover all menuitems*/
 .main-navigation .menu-item-has-children:hover {
-   opacity: 1;
+   /*opacity: 1;*/
    z-index: 9999;
 }
 /* ---------- ARTICLES ---------- */
@@ -464,6 +464,8 @@ blockquote cite {
   font-size: 12px;
   text-transform: uppercase;
   margin-bottom: 0;
+  box-sizing: border-box;
+  word-wrap: break-word;
 }
 .articles article .article-meta-categories a {
   color: #c9c9c9;
