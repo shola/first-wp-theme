@@ -5,13 +5,13 @@
 	
 		<div class="row">
 		
-			<div class="span9col-sm-9 col-md-9 article-container-fix">
+			<div class="col-sm-9 col-md-9 article-container-fix">
 				
 				<div class="articles">
 
 					<?php if (have_posts()) : ?>
 
-						<div class="additionl-content">
+						<div class="additional-content">
 
 							<h5> 
 								<!-- true will display title, false will output a php string -->
