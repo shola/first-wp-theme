@@ -61,7 +61,7 @@
 						
 						<div class="quote-container">
 							
-							<blockquote>This is a very simple quote!</blockquote>
+							<blockquote>Thank you for visiting my blog!</blockquote>
 							<cite>- Mike Situ</cite>
 							
 						</div> <!-- end quote-container -->
@@ -82,7 +82,7 @@
 						
 						<div class="url-container">
 							
-							<p>This will be the link description!</p>
+							<p>Learn more about Mike here!</p>
 							<span><a href="http:mikesitu.com/about.html">http:mikesitu.com/about.html</a></span>
 							
 						</div> <!-- end quote-container -->
