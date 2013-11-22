@@ -36,10 +36,21 @@
 
 		register_sidebar(
 			array(
+				'name' => __('Center Footer', 'mike-blog'),
+				'id' => 'center-footer',
+				'description' => __('The center footer area', 'mike-blog'),
+				'before_widget' => '<div class="footer-sidebar-widget col-sm-offset-1 col-sm-3 col-md-offset-1 col-md 3">',
+				'after_widget' => '</div> <!-- end sidebar-widget -->',
+				'before_title' => '<h4>',
+				'after_title' => '</h4>'
+		));
+
+		register_sidebar(
+			array(
 				'name' => __('Right Footer', 'mike-blog'),
 				'id' => 'right-footer',
 				'description' => __('right footer area', 'mike-blog'),
-				'before_widget' => '<div class="footer-sidebar-widget col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6">',
+				'before_widget' => '<div class="footer-sidebar-widget col-sm-offset-2 col-sm-3 col-md-offset-2 col-md-3">',
 				'after_widget' => '</div> <!-- end sidebar-widget -->',
 				'before_title' => '<h4>',
 				'after_title' => '</h4>'

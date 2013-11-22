@@ -8,6 +8,8 @@
 				<div class="row">
 				
 					<?php get_sidebar('left-footer'); ?>
+
+					<?php get_sidebar('center-footer'); ?>
 					
 					<?php get_sidebar('right-footer'); ?>
 					
